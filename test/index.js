@@ -30,4 +30,13 @@ describe('wechat-handler', function() {
 
     handler.handle(foo);
   });
+
+  it('should export bundled middleware', function () {
+    expect(wechatHandler.middleware).to.be.an('object');
+    describe('bundled middleware', function () {
+      it('should export logger', function () {
+        expect(wechatHandler.logger).to.be.a('function');
+      });
+    });
+  });
 });
