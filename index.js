@@ -1,3 +1,1 @@
-module.exports = function () {
-  return 'Hello, world';
-};
+module.exports = require('./lib/handler');
