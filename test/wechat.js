@@ -1,3 +1,5 @@
+var should = require('chai').should();
+
 var wechat = require('wechat');
 var connect = require('connect');
 var request = require('supertest');
@@ -17,7 +19,7 @@ describe('integration with wechat', function () {
   app.use(connect.query());
   app.use('/wechat', wechat('some token', handler));
 
-  it('should work', function () {
+  it('should work', function (done) {
     var info = {
       sp: 'sp',
       user: 'user',
