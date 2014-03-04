@@ -11,7 +11,7 @@
     "url": "https://github.com/rogerz/wechat-handler"
   },
   "keywords": [
-    "wechat connect"
+    "wechat", "connect"
   ],
   "author": "Rogerz Zhang <rogerz.zhang@gmail.com>",
   "license": "BSD-3-Clause",
