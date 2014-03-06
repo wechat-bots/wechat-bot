@@ -1,6 +1,6 @@
 {
   "name": "wechat-handler",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "connect like middleware layer for wechat",
   "main": "index.js",
   "scripts": {
