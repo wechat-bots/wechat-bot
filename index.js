@@ -1,1 +1,1 @@
-module.exports = require('./lib/handler');
+module.exports = require('./lib/bot');

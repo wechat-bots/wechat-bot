@@ -1,7 +1,7 @@
 var chai = require('chai');
 var expect = chai.expect;
 
-var wechatHandler = require('..');
+var wechatBot = require('..');
 
 var lastReply;
 
@@ -9,27 +9,27 @@ function logLast(reply) {
   lastReply = reply;
 }
 
-describe('wechat-handler', function() {
-  var handler;
+describe('wechat-bot', function() {
+  var bot;
   var request = {};
   var response = {
     reply: logLast
   };
 
   beforeEach(function () {
-    handler = wechatHandler();
+    bot = wechatBot();
   });
 
   it('should have properties', function() {
-    expect(handler.route).to.be.an('object');
-    expect(handler.stack).to.be.an('array');
+    expect(bot.route).to.be.an('object');
+    expect(bot.stack).to.be.an('array');
   });
   it('should merge proto', function () {
-    expect(handler.handle).to.be.a('function');
-    expect(handler.use).to.be.a('function');
+    expect(bot.handle).to.be.a('function');
+    expect(bot.use).to.be.a('function');
   });
 
-  it('should call handlers', function (done) {
+  it('should call bots', function (done) {
     var fn1 = function fn1(req, res, next) {
       expect(req).to.equal(request);
       req.afterFn1 = true;
@@ -40,10 +40,10 @@ describe('wechat-handler', function() {
       expect(req.afterFn1).to.be.true;
       done();
     };
-    handler.use(fn1)
+    bot.use(fn1)
       .use(fn2);
 
-    handler.handle(request, response);
+    bot.handle(request, response);
   });
 
   it('should reply pardon', function (done) {
@@ -51,6 +51,6 @@ describe('wechat-handler', function() {
       expect(reply).to.eql({type: 'text', content: 'pardon'});
       done();
     };
-    handler.handle(request, response);
+    bot.handle(request, response);
   });
 });

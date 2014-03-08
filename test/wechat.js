@@ -7,17 +7,17 @@ var utils = require('./utils');
 var template = utils.template;
 var tail = utils.tail;
 
-var wechatHandler = require('..');
+var wechatBot = require('..');
 
 describe('integration with wechat', function () {
-  var handler = wechatHandler();
-  handler.use(function (req, res, next) {
+  var bot = wechatBot();
+  bot.use(function (req, res, next) {
     res.reply('hello');
   });
 
   var app = connect();
   app.use(connect.query());
-  app.use('/wechat', wechat('some token', handler));
+  app.use('/wechat', wechat('some token', bot));
 
   it('should work', function (done) {
     var info = {
