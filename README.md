@@ -2,7 +2,7 @@
 
 Middleware framework for creating wechat bot.
 
-[![build status](https://secure.travis-ci.org/rogerz/wechat-bot.png)](http://travis-ci.org/rogerz/wechat-bot)
+[![build status](https://secure.travis-ci.org/wechat-bots/wechat-bot.png)](http://travis-ci.org/wechat-bots/wechat-bot)
 
 ## Installation
 
