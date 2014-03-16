@@ -1,6 +1,6 @@
 {
   "name": "wechat-bot",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "middleware framework for creating wechat bot",
   "main": "index.js",
   "scripts": {
