@@ -22,7 +22,8 @@
     "url": "https://github.com/rogerz/wechat-bot/issues"
   },
   "dependencies": {
-    "debug": "^0.7.4"
+    "debug": "^0.7.4",
+    "wechat": "^0.6.7"
   },
   "devDependencies": {
     "chai": "~1.8.1",
